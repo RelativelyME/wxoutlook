@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HTML meta/others -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Styles/scripts -->
+
+    <!--[if lt IE 9]>
+
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Materialize 0.97.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.1.70/css/materialdesignicons.min.css">
+    <style>
+      .link:before{
+        display: inline-block;
+        font: normal normal normal 24px/1 MaterialDesignIcons;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f39e ";
+      }
+      .slink:before{
+        display: inline-block;
+        font: normal normal normal 24px/1 MaterialDesignIcons;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f3a2 ";
+      }
+      .input-field input[type="search"] {
+        display: block;
+        line-height: inherit;
+        padding-left: 4rem;
+        width: calc(100% - 4rem);
+      }
+      .input-field {
+        position: relative;
+        min-width: 300px;
+        overflow: hidden;
+        margin-top: 1rem;
+      }
+      .input-field input[type="search"] ~ .mdi.mdi-window-close {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        color: transparent;
+        cursor: pointer;
+        font-size: 2rem;
+        transition: .3s color;
+      }
+      .input-field input[type="search"] ~ .mdi.mdi-window-close.active {
+        position: absolute;
+        /*top: 0;*/
+        right: 1rem;
+        color: #b6b6b6;
+        cursor: pointer;
+        font-size: 2rem;
+        transition: .3s color;
+      }
+      html, body {
+        height: 100%;
+      }
+      #section {
+        min-height: 100%;
+        margin-bottom: -330px;
+        position: relative;
+      }
+      #page-footer {
+        height: 330px;
+        position: relative;
+      }
+      .clearfooter {
+        height: 330px;
+        clear: both;
+      }
+    </style>
+
+
+
+    <title>wxoutlook [dev]</title>
+  </head>
+  <body>
+    <nav class="light-blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Relatively</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi mdi-menu"></i></a>
+        <ul id="nav-mobile" class="side-nav">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <div class="right">
+          <div class="input-field">
+            <input id="zip" type="search" class="field" required maxlength="">
+            <label for="zip"><i class="mdi mdi-magnify"></i></label>
+            <i class="mdi mdi-window-close"></i>
+          </div>
+        </div>
+        <script>
+          $("#zip").keyup(function(event){
+            if(event.which == 13){
+              var val = $("#zip").val();
+              window.location.replace("http://relatively.me/wxo/weather.php?zip="+val+"&debug=false");
+            }
+          });
+        </script>
+      </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center">WxOutlook</h1>
+        <div class="row center">
+          <h5 class="header col s12">A website to tell you the weather.</h5>
+        </div>
+        <div class="row center">
+          <strong>Q: </strong>How do I view my weather?<br>
+          <strong>A: </strong>Enter your zip code in the text box at the top of the page!<br>
+        </div>
+        <br><br>
+        <div class="clearfooter"></div>
+      </div>
+    </div>
+    <footer class="page-footer light-blue">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Relative</h5>
+            <p class="grey-text text-lighten-4">
+              Hello. My name is Relative(aka Seth) and I love to webdesign and program. I've worked on many projects for myself and others. My current project that I am working on is <a class="link" href="http://wxoutlook.xyz">WxOutlook</a>.
+            </p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Contact</h5>
+            <ul>
+              <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
+              <a class="white-text">Nothing (yet)!</a>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text" href="https://twitter.com/SethFNC"><i class="mdi mdi-twitter"></i> SethFNC</a></li>
+              <li><a class="white-text" href="https://youtube.com/c/RelativeGaming"</a><i class="mdi mdi-youtube-play"></i> Relative</li>
+              <li><a class="white-text" href="https://plus.google.com/+RelativeGaming"><i class="mdi mdi-google-plus"></i> +RelativeGaming</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright light-blue darken-2">
+        <div class="container">
+          Made with <a class="link" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $(".button-collapse").sideNav();
+    </script>
+  </body>
+</html>
